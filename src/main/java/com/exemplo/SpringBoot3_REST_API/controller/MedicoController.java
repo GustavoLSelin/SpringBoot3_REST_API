@@ -1,13 +1,12 @@
 package com.exemplo.SpringBoot3_REST_API.controller;
 
+import com.exemplo.SpringBoot3_REST_API.medico.DadosCadastroMedico;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/medicos")
 public class MedicoController {
-
-
 
     @GetMapping
     public String buscarMedico() {
@@ -29,7 +28,7 @@ public class MedicoController {
                 "}";
     }
     @PostMapping
-    public String cadastroMedico(@RequestBody String json) {
+    public String cadastroMedico(@RequestBody DadosCadastroMedico dados) {
 
         return "Medico cadastrado com sucesso";
 
